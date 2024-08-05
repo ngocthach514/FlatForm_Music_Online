@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PLATFORM MUSIC ONLINE</title>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css" />
+    <script
+      src="https://kit.fontawesome.com/505cf18840.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper container-fluid">
+      <!-- ASIDE_MENU -->
+      <aside id="sidebar" class="js-sidebar" style="position: relative">
+        <div
+          class="menu_side"
+          style="margin: 1.5% 0.5% 0 0; border-radius: 10px 0 0 0"
+        >
+          <!-- ASIDE_logo -->
+          <h1 class="mb-3 h1_playlist">Playlist</h1>
+          <!-- ASIDE_menu_list -->
+          <ul class="nav flex-column ps-1">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                <h4 class="active">
+                  <span></span><i class="bi bi-music-note-beamed"></i> Playlist
+                </h4>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <h4>
+                  <span></span><i class="bi bi-music-note-beamed"></i> Last
+                  Listening
+                </h4>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <h4>
+                  <span></span
+                  ><i class="bi bi-music-note-beamed"></i> Recomended
+                </h4>
+              </a>
+            </li>
+          </ul>
+          <!-- ASIDE_menu_song -->
+          <div class="menu_song">
+            <li class="songItem">
+              <span>01</span>
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e0201807cbe5b0cea6f73eda25e"
+                alt=""
+              />
+              <h5>
+                Chúng Ta Của Tương Lai <br />
+                <div class="subtitle">Sơn Tùng M-TP</div>
+              </h5>
+              <i
+                class="bi bi-pause-circle-fill active_play"
+                style="color: #36e2ec"
+              ></i>
+            </li>
+            <li class="songItem">
+              <span>02</span>
+              <img
+                src="https://i.scdn.co/image/ab6761610000517411f41ae567b4830275acede8"
+                alt=""
+              />
+              <h5>
+                Thiên Lý Ơi <br />
+                <div class="subtitle">Jack - J97</div>
+              </h5>
+              <i class="bi playListPlay bi-play-circle-fill" id="1"></i>
+            </li>
+            <li class="songItem">
+              <span>03</span>
+              <img
+                src="https://i.scdn.co/image/ab67616100005174da93c541daefd806b8992302"
+                alt=""
+              />
+              <h5>
+                Thương Em Là Điều Anh Không Thể Ngờ <br />
+                <div class="subtitle">Noo Phước Thịnh</div>
+              </h5>
+              <i class="bi playListPlay bi-play-circle-fill" id="1"></i>
+            </li>
+            <li class="songItem">
+              <span>04</span>
+              <img
+                src="https://i.scdn.co/image/ab676161000051744371fb198b011bb666a3bfde"
+                alt=""
+              />
+              <h5>
+                Một Bước Yêu Vạn Dặm Đau <br />
+                <div class="subtitle">Mr.Siro</div>
+              </h5>
+              <i class="bi playListPlay bi-play-circle-fill" id="1"></i>
+            </li>
+            <li class="songItem">
+              <span>05</span>
+              <img
+                src="https://i.scdn.co/image/ab67616d0000b27302dc41ad81138aa3c53d2b98"
+                alt=""
+              />
+              <h5>
+                Thằng Điên <br />
+                <div class="subtitle">Justatee - Phương Ly</div>
+              </h5>
+              <i class="bi playListPlay bi-play-circle-fill" id="1"></i>
+            </li>
+            <button class="btn xemthem" style="margin-left: 34%">
+              See More...
+            </button>
+          </div>
+        </div>
+        <button
+          class="btn btn_toggle"
+          id="sidebar-toggle"
+          type="button"
+          style="position: absolute; top: 50%; right: -35px; z-index: 1"
+        >
+          <span class="fa-solid fa-angle-left"></span>
+        </button>
+      </aside>
+
+      <!-- CONTENTS -->
+      <div class="main">
+        <main class="content scroll_bar">
+          <div
+            class="container-fluid px-0"
+            style="position: relative; width: 100%; max-height: 86vh"
+          >
+            <!-- CONTENTS_nav -->
+            <nav
+              class="navbar navbar-expand-lg container-fluid px-4"
+              style="font-size: 12px; position: fixed; z-index: 10000;"
+            >
+              <div class="container-fluid">
+                <div
+                  class="collapse navbar-collapse"
+                  id="navbarSupportedContent"
+                >
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0 hehe">
+                    <li class="nav-item">
+                      <a class="nav-link acti" aria-current="page" href="#"
+                        >Home</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Album</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Discovery</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">My Accound</a>
+                    </li>
+                  </ul>
+                  <form
+                    class="d-flex form_search"
+                    role="search"
+                    style="
+                      float: right;
+                      font-size: 12px;
+                      width: 28.5%;
+                      opacity: 0.3;
+                      position: absolute;
+                      left: 40%;
+                    "
+                  >
+                    <i
+                      class="bi bi-search"
+                      style="
+                        position: absolute;
+                        font-size: 15px;
+                        top: 15%;
+                        left: 5%;
+                      "
+                    ></i>
+                    <input
+                      style="
+                        font-size: 11px;
+                        border-radius: 20px;
+                        padding: 2% 15%;
+                      "
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="Search Music"
+                      aria-label="Search"
+                    />
+                  </form>
+                </div>
+              </div>
+            </nav>
+            <div class="play_music" style="position: relative; height: 90%;">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-lg-3 col-sm-12">
+                    <p class="name_song_content">CHÚNG TA CỦA TƯƠNG LAI</p>
+                    <p class="name_singer_content">Singer: Sơn Tùng M-TP<br>Listens: 12.892.744</p>
+                  </div>
+                  <div class="col-lg-6 col-sm-12">
+                    <div
+                      class="card_music"
+                      style="
+                      z-index: 1;
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        justify-items: center;
+                        top: 50%;
+                        left: 49%;
+                        transform: translate(-50%, -50%);
+                      "
+                    >
+                      <img
+                        src="https://i.scdn.co/image/ab67616d00001e0201807cbe5b0cea6f73eda25e"
+                        alt=""
+                        style="
+                          position: relative;
+                          width: 80%;
+                          border-radius: 50%;
+                          animation: xoayvong 2s linear 0s infinite;
+                          -webkit-animation: xoayvong 10s linear 0s infinite;
+                          -moz-animation: xoayvong 10s linear 0s infinite;
+                          -o-animation: xoayvong 10s linear 0s infinite;
+                        "
+                      />
+                      <div
+                        class="cham"
+                        style="
+                          opacity: 0.7;
+                          height: 16.5%;
+                          width: 13%;
+                          background-color: #111727;
+                          border-radius: 50%;
+                          position: absolute;
+                          top: 50%;
+                          left: 49.8%;
+                          transform: translate(-50%, -50%);
+                        "
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-12">
+                    <p class="lyric_song">
+                      Liệu mai sau phai vội mau không bước bên cạnh nhau Thì ta có
+                      đau? Đôi mi nhoè phai ai sẽ lau? Ai sẽ đến lau nỗi đau này? Vô
+                      tâm quay lưng ta thờ ơ, lạnh lùng băng giá như vậy sao? Vờ không
+                      biết nhau Lặng im băng qua chẳng nói một lời
+                      Ooh-whoa-ooh-whoa-oh-oh-oh Rồi niềm đau có chóng quên? Hay càng
+                      quên càng nhớ thêm, vấn vương vết thương lòng xót xa? Đừng như
+                      con nít, từng mặn nồng say đắm say Cớ sao khi chia tay, ta xa lạ
+                      đến kì lạ? Ai dám nói trước sau này Chẳng ai biết trước tương
+                      lai sau này Tình yêu đâu biết mai này có vẹn nguyên Còn nguyên
+                      như lời ta đã hứa trước đây? Dẫu cho giông tố xô xa rời Còn mãi
+                      những điều đẹp đẽ say đắm một thời Nụ cười và giọt nước mắt rơi
+                      từng trao cùng ta Nhìn lại về phía mặt trời Ta về phía mặt trời
+                    </p>
+                    <button
+                      type="button"
+                      class="btn xemthem btn_lyric"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                    >
+                      See More...
+                    </button>
+                    <div
+                      class="modal fade"
+                      id="exampleModal"
+                      tabindex="-1"
+                      aria-labelledby="exampleModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog">
+                        <div
+                          class="modal-content"
+                          style="background-color: #111727; color: #fff"
+                        >
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                            style="background-color: #fff; margin: 14px"
+                          ></button>
+                          <div
+                            class="modal-body"
+                            style="font-weight: 400; font-size: 11px"
+                          >
+                            <strong style="text-indent: 20px; font-size: 16px"
+                              >Lời bài hát</strong
+                            ><br />
+                            <strong style="text-indent: 20px; color: #36e2ec"
+                              >Verse</strong
+                            ><br />
+                            Liệu mai sau phai vội mau không bước bên cạnh nhau (bên
+                            cạnh nhau) <br />
+                            Thì ta có đau? (Thì ta có đau? Có đau?) <br />
+                            Đôi mi nhoè phai ai sẽ lau? <br />
+                            Ai sẽ đến lau nỗi đau này? <br />
+                            Vô tâm quay lưng ta thờ ơ, lạnh lùng băng giá như vậy sao?
+                            (Vậy sao? Vậy sao?) <br />
+                            Vờ không biết nhau (không biết nhau, không biết nhau)
+                            <br />
+                            Lặng im băng qua chẳng nói một lời (chẳng nói một lời)
+                            <br />
+                            Ooh-whoa-ooh-whoa-oh-oh-oh (yeah, eh) <br />
+                            Rồi niềm đau có chóng quên? (Hah-ah-ooh-ah) <br />
+                            Hay càng quên càng nhớ thêm, vấn vương vết thương lòng xót
+                            xa? <br />
+                            Đừng như con nít (con nít), từng mặn nồng say đắm say
+                            (oh-oh-ah) <br />
+                            Cớ sao khi chia tay (chia tay), ta xa lạ đến kì lạ? (Ta xa
+                            lạ đến kì lạ) <br />
+                            <strong style="text-indent: 20px; color: #36e2ec"
+                              >Chorus</strong
+                            ><br />
+                            Ai dám nói trước sau này (trước sau này) <br />
+                            Chẳng ai biết trước tương lai sau này (sau này) <br />
+                            Tình yêu đâu biết mai này có vẹn nguyên <br />
+                            Còn nguyên như lời ta đã hứa trước đây? (Ta đã hứa trước
+                            đây) <br />
+                            Dẫu cho giông tố xô xa rời (xa rời) <br />
+                            Còn mãi những điều đẹp đẽ say đắm một thời (một thời)
+                            <br />
+                            Nụ cười và giọt nước mắt rơi từng trao cùng ta <br />
+                            Nhìn lại về phía mặt trời (phía mặt trời) <br />
+                            Ta về phía mặt trời (phía mặt trời) <br />
+                            <strong style="text-indent: 20px; color: #36e2ec"
+                              >Rap</strong
+                            ><br />
+                            Yah, yah <br />
+                            Tương lai ngày mai ai nào hay (woah) <br />
+                            Yêu thương rồi buông đôi bàn tay (woah) <br />
+                            Mong manh đường duyên như vận may <br />
+                            Chia ly, hợp tan nhanh còn hơn mây trời bay (yah) <br />
+                            Quên nhau, vờ như chưa từng quen (sao quên?) <br />
+                            Quên luôn mặt, quên luôn cả tên (sao quên?) <br />
+                            Quên đi, làm sao mà đòi quên? <br />
+                            Khi câu thề xưa vẫn vẹn nguyên nên đừng cố quên (ah)
+                            <br />
+                            Vấn vương cũng chẳng sao mà (woah), nhớ nhung cũng chẳng
+                            sao mà (woah) <br />
+                            Đớn đau cũng chẳng sao mà (woah) <br />
+                            Dù có đắng cay ta cũng chẳng sao đâu <br />
+                            Chân thành khi còn bên nhau và trân trọng hơn mỗi phút
+                            giây (hơn mỗi phút giây) <br />
+                            Thành thật bên nhau mỗi phút giây (yeah, yeah) <br />
+                            <strong style="text-indent: 20px; color: #36e2ec"
+                              >Verse</strong
+                            ><br />
+                            Rồi niềm đau có chóng quên? (Hah-ah-ooh-ah) <br />
+                            Hay càng quên càng nhớ thêm, vấn vương vết thương lòng xót
+                            xa? (Whoa-oh-oh-oh-oh-oh-oh) <br />
+                            Đừng như con nít (con nít), từng mặn nồng say đắm say
+                            (oh-oh-ah) <br />
+                            Cớ sao khi chia tay (chia tay), ta xa lạ đến kì lạ? (Ta xa
+                            lạ đến kì lạ, hah) <br />
+                            <strong style="text-indent: 20px; color: #36e2ec"
+                              >Chorus</strong
+                            ><br />
+                            Ai dám nói trước sau này (trước sau này) <br />
+                            Chẳng ai biết trước tương lai sau này (sau này) <br />
+                            Tình yêu đâu biết mai này có vẹn nguyên <br />
+                            Còn nguyên như lời ta đã hứa trước đây? (Ta đã hứa trước
+                            đây) <br />
+                            Dẫu cho giông tố xô xa rời (xa rời) <br />
+                            Còn mãi những điều đẹp đẽ say đắm một thời (một thời)
+                            <br />
+                            Nụ cười và giọt nước mắt rơi từng trao cùng ta <br />
+                            Nhìn lại về phía mặt trời <br />
+                            Ai dám nói trước sau này <br />
+                            Chẳng ai biết trước tương lai (trước tương lai, trước
+                            tương lai) <br />
+                            Tình yêu đâu biết mai này có vẹn nguyên như lời ta đã hứa
+                            trước đây? <br />
+                            Dẫu cho giông tố xô xa rời <br />
+                            Dù cho bão giông chia lìa ta (dù cho bão giông chia lìa
+                            ta) <br />
+                            Nụ cười và giọt nước mắt rơi <br />
+                            Để trao tặng em một cơn mơ, y-yah, y-yah (y-yah, y-yah,
+                            hah) <br />
+                            <strong style="text-indent: 20px; color: #36e2ec"
+                              >Bridge</strong
+                            ><br />
+                            Ai dám nói trước sau này (sống bên nhau mà) <br />
+                            Chẳng ai biết trước tương lai sau này (sống bên nhau mà)
+                            <br />
+                            Tình yêu đâu biết mai này có vẹn nguyên <br />
+                            Còn nguyên như lời ta đã hứa trước đây? (Ta đã hứa trước
+                            đây) <br />
+                            Dẫu cho giông tố xô xa rời (giữ yêu thương kia) <br />
+                            Còn mãi những điều đẹp đẽ say đắm một thời (giữ yêu thương
+                            kia) <br />
+                            Nụ cười và giọt nước mắt rơi từng trao cùng ta <br />
+                            Nhìn lại về phía mặt trời (mặt trời) <br />
+                            Ta về phía mặt trời (phía mặt trời, phía mặt trời, phía
+                            mặt trời) <br />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e0201807cbe5b0cea6f73eda25e"
+                alt=""
+                style="
+                  width: 100%;
+                  max-height: 86vh;
+                  opacity: 0.3;
+                  filter: brightness(40%);
+                  position: relative;
+                  object-fit: fill;
+                "
+              />
+            </div>
+            <div class="container-fluid Top_Artists pb-4 ps-5">
+              <div class="fw-bold pt-2">Top Artists</div>
+              <div class="row px-5 d-flex justify-content-between mt-2 card-container">
+                <div class="card">
+                  <img src="https://i.scdn.co/image/ab67616100005174da93c541daefd806b8992302" class="card-img-top img_artist mt-2" alt="...">
+                  <div class="card-body">
+                      <img class="medal_three" src="   https://cdn-icons-png.flaticon.com/512/3871/3871194.png " alt="" width="30px" height="30px">
+                      <p class="card-text">Noo Phước Thịnh</p>
+                      <p class="total_view">340.7M Plays</p>
+                  </div>
+                </div>
+                <div class="card">
+                    <img src="https://i.scdn.co/image/ab6761610000517411f41ae567b4830275acede8" class="card-img-top img_artist mt-2" alt="...">
+                    <div class="card-body">
+                        <img class="medal_two" src="   https://cdn-icons-png.flaticon.com/512/3871/3871181.png " alt="" width="30px" height="30px">
+                        <p class="card-text">Jack - J97</p>
+                        <p class="total_view">700.7M Plays</p>
+                    </div>
+                </div>
+                <div class="card">
+                  <img src="https://i.scdn.co/image/ab67616d00001e0201807cbe5b0cea6f73eda25e" class="card-img-top img_artist mt-2" alt="...">
+                  <div class="card-body">
+                      <img class="medal_one" src="   https://cdn-icons-png.flaticon.com/512/3871/3871167.png " alt="" width="30px" height="30px">
+                      <p class="card-text">Sơn Tùng M-TP</p>
+                      <p class="total_view">1.1B Plays</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="https://i.scdn.co/image/ab67616d0000b27302dc41ad81138aa3c53d2b98" class="card-img-top img_artist mt-2" alt="...">
+                  <div class="card-body">
+                      <p class="card-text">Justatee</p>
+                      <p class="total_view">140.7M Plays</p>
+                  </div>
+                </div>
+                <div class="card">
+                    <img src="https://i.scdn.co/image/ab676161000051744371fb198b011bb666a3bfde" class="card-img-top img_artist mt-2" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Mr.Siro</p>
+                        <p class="total_view">306.7M Plays</p>
+                    </div>
+                </div>
+                <div class="card">
+                  <img src="https://i.scdn.co/image/ab6761610000517469d78c2895772c42d400fd85" class="card-img-top img_artist mt-2" alt="...">
+                  <div class="card-body">
+                      <p class="card-text">Bích Phương</p>
+                      <p class="total_view">312.5M Plays</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid mt-4">
+              <div class="row d-flex justify-content-around">
+                <div class="col-lg-4 col-md-12 col-sm-12 genres py-3">
+                  <h6 class="col-12 text-start p-1 fw-bold">Genres</h6>
+                  <div class="dance_beat p-3">Dance Beat</div>
+                  <div class="electro_pop p-3">Electro Pop</div>
+                  <div class="altermative_indle p-3">Altermative Indle</div>
+                  <div class="hip_hop p-3">Hip Hop</div>
+                  <div class="classical_period p-3">Classical Period</div>
+                  <div class="classical_period p-3">Rap Hip Hop</div>
+                </div>
+                <div class="col-lg-7 col-md-12 col-sm-12 top_listen_day py-3">
+                  <div class="row">
+                    <h6 class="col-6 text-start pt-1 ps-3 fw-bold">Featured MV</h6>
+                    <div class="col-6 d-flex justify-content-around" style="align-items: center;">
+                      <i class="fa-solid fa-chevron-left" id="prev"></i>
+                      <i class="fa-solid fa-chevron-right" id="next"></i>
+                    </div>
+                  </div>
+                  <div class="row video-container-wrapper">
+                    <div class="video-container">
+                      <div class="video-slide">
+                        <iframe width="400" height="250" src="https://www.youtube-nocookie.com/embed/FVF6ld2PaTs?si=EZr1gKWlkmcIyLH5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                      </div>
+                      <div class="video-slide">
+                        <iframe width="400" height="250" src="https://www.youtube-nocookie.com/embed/abPmZCZZrFA?si=Zcvu3obueEwZ2hhj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                      </div>
+                      <div class="video-slide">
+                        <iframe width="400" height="250" src="https://www.youtube-nocookie.com/embed/knW7-x7Y7RE?si=Cq-hW3k7iG3JZDpT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>                
+              </div>
+            </div>
+            <p>akjhsdasd</p>
+            <p>akjhsdasd</p>
+            <p>akjhsdasd</p>
+            <p>akjhsdasd</p>
+            <p>akjhsdasd</p>
+            <p>akjhsdasd</p>
+            <p>akjhsdasd</p>
+            <p>akjhsdasd</p>
+            <p>akjhsdasd</p>
+            <p>akjhsdasd</p>
+            <p>akjhsdasd</p>
+            <p>akjhsdasd</p>
+            <p>akjhsdasd</p>
+            <p>akjhsdasd</p>
+            <p>akjhsdasd</p>
+            <p>akjhsdasd</p>
+            <footer class="footer">
+              <div class="container-fluid">
+                <div class="row text-muted">
+                  <div class="col-6 text-start">
+                    <p class="mb-0">
+                      <a href="#" class="text-muted">
+                        <strong>NgocThach</strong>
+                      </a>
+                    </p>
+                  </div>
+                  <div class="col-6 text-end">
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a href="#" class="text-muted">Contact</a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" class="text-muted">About Us</a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" class="text-muted">Terms</a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" class="text-muted">Booking</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </main>
+        <!-- Moon Sun -->
+        <a href="#" class="theme-toggle" style="z-index: 10000">
+          <i class="fa-regular fa-moon"></i>
+          <i class="fa-regular fa-sun"></i>
+        </a>
+      </div>
+
+      <!-- PLAY MUSIC -->
+      <div class="container-fluid text-center fixed-bottom px-4" id="musicControl">
+        <div class="row my-2">
+          <div class="col-lg-3 col-md-3 col-sm-3 pt-2">
+            <div class="row">
+              <div class="col-lg-2 col-md-2 d-flex justify-content-center" style="align-items: center;">
+                <img class="img_song" src="https://i.scdn.co/image/ab67616d00001e0201807cbe5b0cea6f73eda25e" alt=""/>
+              </div>
+              <div class="col-lg-3 col-md-3 d-flex justify-content-center" style="align-items: center;">
+                <div class="playing">
+                  <div class="rect1"></div>
+                  <div class="rect2"></div>
+                  <div class="rect3"></div>
+                  <div class="rect4"></div>
+                  <div class="rect5"></div>
+                </div>
+              </div>
+              <div class="col-lg-7 col-md-7">
+                <div class="row">
+                  <div class="name_song_item">Chúng Ta Của Tương Lai</div>
+                  <div class="name_singer">Sơn Tùng M-TP</div>
+                </div>
+                <div class="row icon">
+                  <div class="col-lg-12">
+                    <button type="button" data-bs-toggle="tooltip" data-bs-placement="top"
+                      data-bs-custom-class="custom-tooltip" data-bs-title="Click to drop hearts"
+                      style="border: none; background: none">
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <button type="button" data-bs-toggle="tooltip" data-bs-placement="top"
+                      data-bs-custom-class="custom-tooltip" data-bs-title="Click to save to favorites"
+                      style="border: none; background: none">
+                      <i class="fa-regular fa-bookmark"></i>
+                    </button>
+                    <button type="button" data-bs-toggle="tooltip" data-bs-placement="top"
+                      data-bs-custom-class="custom-tooltip" data-bs-title="Click to share"
+                      style="border: none; background: none">
+                      <i class="fa-solid fa-share-from-square"></i>
+                    </button>
+                    <button type="button" data-bs-toggle="tooltip" data-bs-placement="top"
+                      data-bs-custom-class="custom-tooltip" data-bs-title="Click to add to waiting list"
+                      style="border: none; background: none">
+                      <i class="fa-solid fa-list"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-9 col-md-9 col-sm-9">
+            <div class="row">
+              <div class="col-lg-2"></div>
+              <div class="col-lg-8 col-md-9 col-sm-9">
+                <div class="row mt-3">
+                  <div class="range d-flex justify-content-around ms-2">
+                    <span>01:16</span>
+                    <div class="range-icon">
+                      <div class="range_main">
+                        <div class="range_play"></div>
+                      </div>
+                    </div>
+                    <span>04:59</span>
+                  </div>
+                </div>
+                <div class="row play_song_2 justify-content-center">
+                  <div class="col-2">
+                    <i class="fa-solid fa-backward-fast"></i>
+                  </div>
+                  <div class="col-2">
+                    <i class="fa-solid fa-backward"></i>
+                  </div>
+                  <div class="col-2">
+                    <!-- <i class="fa-solid fa-play fs-4"></i> -->
+                    <i class="fa-solid fa-pause fs-5"></i>
+                  </div>
+                  <div class="col-2">
+                    <i class="fa-solid fa-forward"></i>
+                  </div>
+                  <div class="col-2">
+                    <i class="fa-solid fa-forward-fast"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-3 col-sm-3 container-fluid mt-3">
+                <div class="replay d-flex mt-2 justify-content-around ms-1" style="align-items: center;">
+                  <i class="fa-solid fa-shuffle" style="cursor: pointer; font-size: 11px;"></i>
+                  <i class="fa-solid fa-rotate-left" style="cursor: pointer; font-size: 11px;"></i>
+                  <i class="fa-solid fa-volume-high" style="cursor: pointer; font-size: 11px;">
+                    <div class="volume">
+                        <div class="volume_main">
+                            <div class="volume_extra"></div>
+                        </div>
+                    </div>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script>
+//RANGE PLAY MUSIC
+document.addEventListener('DOMContentLoaded', () => {
+    const rangeMain = document.querySelector('.range_main');
+    const rangePlay = document.querySelector('.range_play');
+    let isDragging = false;
+
+    function adjustRangePlay(event) {
+        const rect = rangeMain.getBoundingClientRect();
+        let newWidth = event.clientX - rect.left;
+
+        if (newWidth < 0) {
+            newWidth = 0;
+        }
+        if (newWidth > rect.width) {
+            newWidth = rect.width;
+        }
+
+        const percentage = (newWidth / rect.width) * 100;
+        rangePlay.style.width = percentage + '%';
+    }
+
+    rangeMain.addEventListener('mousedown', (event) => {
+        isDragging = true;
+        adjustRangePlay(event);
+        document.addEventListener('mousemove', onMouseMove);
+        document.addEventListener('mouseup', onMouseUp);
+    });
+
+    function onMouseMove(event) {
+        if (isDragging) {
+            adjustRangePlay(event);
+        }
+    }
+
+    function onMouseUp() {
+        isDragging = false;
+        document.removeEventListener('mousemove', onMouseMove);
+        document.removeEventListener('mouseup', onMouseUp);
+    }
+});
+
+//VOLUME
+document.addEventListener('DOMContentLoaded', () => {
+    const volumeMain = document.querySelector('.volume_main');
+    const volumeExtra = document.querySelector('.volume_extra');
+    const volumeIcon = document.querySelector('.fa-volume-high');
+    const volume = document.querySelector('.volume');
+    let isDragging = false;
+    let isVolumeVisible = false;
+
+    volumeIcon.addEventListener('click', () => {
+        isVolumeVisible = !isVolumeVisible; // Chuyển đổi trạng thái hiển thị thanh trượt
+        volume.style.visibility = isVolumeVisible ? 'visible' : 'hidden'; // Cập nhật hiển thị của thanh trượt
+    });
+
+    volumeMain.addEventListener('mousedown', (event) => {
+        if (!isVolumeVisible) return; // Không cho phép kéo nếu thanh trượt không hiển thị
+
+        isDragging = true;
+        adjustVolume(event);
+        document.addEventListener('mousemove', onMouseMove);
+        document.addEventListener('mouseup', onMouseUp);
+    });
+
+    function onMouseMove(event) {
+        if (isDragging) {
+            adjustVolume(event);
+        }
+    }
+
+    function onMouseUp() {
+        isDragging = false;
+        document.removeEventListener('mousemove', onMouseMove);
+        document.removeEventListener('mouseup', onMouseUp);
+    }
+
+    function adjustVolume(event) {
+        const rect = volumeMain.getBoundingClientRect();
+        let newHeight = event.clientY - rect.top;
+        if (newHeight < 0) {
+            newHeight = 0;
+        }
+        if (newHeight > rect.height) {
+            newHeight = rect.height;
+        }
+        volumeExtra.style.height = (newHeight / rect.height) * 100 + '%';
+    }
+});
+
+// MOVE CARD
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.card');
+    const container = document.querySelector('.card-container');
+    const containerWidth = container.offsetWidth;
+    const cardWidth = 145;
+    const totalCards = cards.length;
+
+    cards.forEach((card, index) => {
+        card.style.right = `${(cardWidth + 22.5) * index}px`;
+    });
+
+    function moveCards() {
+        cards.forEach((card, index) => {
+            let currentLeft = parseFloat(card.style.right);
+            card.style.right = `${currentLeft + 1}px`;
+
+            if (currentLeft > containerWidth) {
+                card.style.right = `-${cardWidth}px`;
+            }
+        });
+
+        requestAnimationFrame(moveCards);
+    }
+
+    moveCards();
+});
+
+// SCROLL HIDE CONTROL PLAY MUSIC
+document.addEventListener('DOMContentLoaded', () => {
+    let lastScrollTop = 0;
+    const musicControl = document.querySelector('#musicControl');
+    const navbar = document.querySelector('.navbar');
+    const scrollContainer = document.querySelector('.scroll_bar'); // Thay đổi phần tử lắng nghe sự kiện
+
+    if (!musicControl) {
+        console.error('Element with ID "musicControl" not found.');
+        return;
+    }
+
+    if (!scrollContainer) {
+        console.error('Scroll container not found.');
+        return;
+    }
+
+    scrollContainer.addEventListener('scroll', () => {
+        const currentScrollTop = scrollContainer.scrollTop; // Lấy vị trí cuộn của phần tử chứa
+
+        if (currentScrollTop > lastScrollTop) {
+            // Scrolling down
+            navbar.classList.add('navbar-scroll');
+            musicControl.style.transform = 'translateY(100%)'; // Hide music control
+        } else {
+            // Scrolling up
+            navbar.classList.remove('navbar-scroll');
+            musicControl.style.transform = 'translateY(0)'; // Show music control
+        }
+        
+        lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For mobile or negative scrolling
+    });
+});
+
+// NEXT VIDEO
+document.addEventListener('DOMContentLoaded', () => {
+  const prevButton = document.getElementById('prev');
+  const nextButton = document.getElementById('next');
+  const slides = document.querySelectorAll('.video-slide');
+  const slideCount = slides.length;
+  let currentIndex = 0;
+
+  function updateSlides() {
+    const slideWidth = slides[0].getBoundingClientRect().width; // Chiều rộng của mỗi video
+    // Cập nhật vị trí của video-container
+    document.querySelector('.video-container').style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+
+    // Cập nhật sự hiển thị của các video slide
+    slides.forEach((slide, index) => {
+      slide.style.opacity = (index >= currentIndex && index < currentIndex + 2) ? '1' : '0';
+      slide.style.visibility = (index >= currentIndex && index < currentIndex + 2) ? 'visible' : 'hidden';
+    });
+  }
+
+  prevButton.addEventListener('click', () => {
+    // Di chuyển về video trước đó
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : slideCount - 1;
+    updateSlides();
+  });
+
+  nextButton.addEventListener('click', () => {
+    // Di chuyển tới video tiếp theo
+    currentIndex = (currentIndex < slideCount - 1) ? currentIndex + 1 : 0;
+    updateSlides();
+  });
+
+  // Khởi tạo
+  updateSlides();
+});
+
+
+</script>
+<script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
